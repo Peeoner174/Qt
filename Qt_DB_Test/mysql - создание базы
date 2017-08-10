@@ -1,0 +1,23 @@
+# войдите в mysql
+mysql -u root -p
+
+#создайте базу и таблицу
+
+CREATE SCHEMA `test_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_roman_ci ;
+
+CREATE TABLE `test_db`.`test_table` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '',
+  `date_created` DATE NULL COMMENT '',
+  `text` VARCHAR(500) NULL COMMENT '',
+  `criterion` VARCHAR(100) NULL COMMENT '',
+  `test_ending` DATE NULL COMMENT '',
+  `responsible` VARCHAR(50) NULL COMMENT '',
+  `date_finish` DATE NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '',
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC)  COMMENT '');
+
+
+#выйдите из mysql
+exit
+
+
